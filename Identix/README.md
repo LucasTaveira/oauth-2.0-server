@@ -98,7 +98,7 @@ curl -X POST http://localhost:8000/o/token/ \
 ### 4. Requisição a recursos protegidos
 
 ```bash
-curl http://localhost:8000/api/wallet/user-info \
+curl http://localhost:8000/api/wallet/info-user \
   -H "Authorization: Bearer <access_token>"
 ```
 
