@@ -15,5 +15,5 @@ class WalletPL(ViewSet):
 
     @action(detail=False, methods=['get'], url_path="info-user")#em produção será details=True
     def info_user(self, request):
-        return Response({"message": "retorno busca user Wallet"})
-    
+        sn = request.query_params.get('sn')
+        return Response({"message": f"retorno busca user Wallet: {sn}"})

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ek!kgf9@=n8!y!ukp%5l^27kt=evj!)$=hoz(_gj#)+grhokrl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -140,4 +140,5 @@ REST_FRAMEWORK = {
 OAUTH2_PROVIDER_APPLICATION_MODEL = 'auth_core.CustomApplication'
 OAUTH2_PROVIDER = {
     'SCOPES_BACKEND_CLASS': 'auth_core.oauth2.ScopeBackend',
+    "ACCESS_TOKEN_EXPIRE_SECONDS": 60,
 }
